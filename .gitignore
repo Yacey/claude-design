@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Editors
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+.zed/
+
+# Node / build artifacts (in case someone adds tooling later)
+node_modules/
+dist/
+build/
+*.log
+
+# Env
+.env
+.env.*
+
+# Local scratch
+tmp/
+.scratch/

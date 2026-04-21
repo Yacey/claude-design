@@ -1,0 +1,241 @@
+/* ========================================================================
+   Claude Design System — CSS Variables
+   Paper · Ink · Rust
+   Paste into your project's global stylesheet.
+   ======================================================================== */
+
+:root {
+  /* ---------- Backgrounds ---------- */
+  --bg:              #F0EEE5;
+  --bg-tint-1:       #EEECE3;
+  --bg-tint-2:       #F6F4EB;
+  --bg-soft:         #FAF9F5;
+  --bg-elevated:     #FFFFFC;
+  --bg-code:         #F5F2EA;
+
+  /* ---------- Text ---------- */
+  --ink:             #141413;
+  --ink-soft:        #1F1E1C;
+  --text:            #3D3929;
+  --text-soft:       #4A4636;
+  --muted:           #6E6A5F;   /* AA compliant */
+  --muted-soft:      #8A8577;   /* decorative only */
+  --disabled:        #B5B1A5;
+
+  /* ---------- Borders ---------- */
+  --border:          #E5E1D8;
+  --border-hover:    #D4CFC4;
+  --border-strong:   #C0BBAE;
+  --divider:         #E0DCD1;
+
+  /* ---------- Accent (rust) ---------- */
+  --accent:          #CC785C;
+  --accent-hover:    #B8644A;
+  --accent-text:     #A84F32;   /* AA for text use */
+  --accent-text-hover: #8F3F24;
+  --accent-soft:     #E8C5A0;
+  --accent-softer:   #F4DDC2;
+  --accent-bg:       rgba(204, 120, 92, 0.08);
+  --accent-border:   rgba(204, 120, 92, 0.25);
+
+  /* ---------- Semantic (use sparingly) ---------- */
+  --success:         #6B8E3D;
+  --success-bg:      rgba(107, 142, 61, 0.08);
+  --warning:         #B8864A;
+  --warning-bg:      rgba(184, 134, 74, 0.08);
+  --danger:          #A84F32;
+  --danger-bg:       rgba(168, 79, 50, 0.08);
+  --info:            #5A7A9C;
+  --info-bg:         rgba(90, 122, 156, 0.08);
+
+  /* ---------- Interaction ---------- */
+  --selection-bg:    rgba(204, 120, 92, 0.22);
+  --focus-ring:      rgba(204, 120, 92, 0.5);
+  --link:            #A84F32;
+  --link-hover:      #8F3F24;
+  --mark-bg:         #F4DDC2;
+
+  /* ---------- Typography ---------- */
+  --font-display:    "Fraunces", "Instrument Serif", Georgia, serif;
+  --font-body:       "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+                     "PingFang SC", "Source Han Sans SC", sans-serif;
+  --font-mono:       "JetBrains Mono", "Geist Mono", ui-monospace,
+                     "SF Mono", Menlo, monospace;
+
+  /* Font sizes (px) */
+  --fs-12: 12px; --fs-14: 14px; --fs-16: 16px; --fs-18: 18px;
+  --fs-20: 20px; --fs-22: 22px; --fs-24: 24px; --fs-28: 28px;
+  --fs-32: 32px; --fs-42: 42px; --fs-56: 56px; --fs-72: 72px;
+  --fs-96: 96px; --fs-120: 120px; --fs-160: 160px; --fs-200: 200px;
+  --fs-240: 240px;
+
+  /* ---------- Spacing (8px baseline) ---------- */
+  --s-1:   4px;  --s-2:   8px;  --s-3:  12px;  --s-4:  16px;
+  --s-5:  24px;  --s-6:  32px;  --s-7:  48px;  --s-8:  64px;
+  --s-9:  96px;  --s-10: 128px; --s-11: 160px; --s-12: 200px;
+
+  /* ---------- Radii ---------- */
+  --radius-sm: 4px;
+  --radius:    6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+
+  /* ---------- Motion ---------- */
+  --ease-expo:     cubic-bezier(0.16, 1, 0.3, 1);   /* signature */
+  --ease-quart:    cubic-bezier(0.23, 1, 0.32, 1);  /* power4.out */
+  --ease-cubic:    cubic-bezier(0.33, 1, 0.68, 1);  /* power3.out */
+  --ease-quad:     cubic-bezier(0.39, 1, 0.74, 1);  /* power2.out */
+  --ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);
+
+  --dur-instant: 0.1s;
+  --dur-fast:    0.15s;
+  --dur-base:    0.3s;
+  --dur-medium:  0.5s;
+  --dur-slow:    0.8s;
+
+  /* ---------- Content widths ---------- */
+  --w-prose:    680px;
+  --w-wide:    1080px;
+  --w-screen:  1440px;
+}
+
+/* ========================================================================
+   Dark mode (prefers-color-scheme) — optional
+   ======================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:              #1A1915;
+    --bg-tint-1:       #1F1E19;
+    --bg-tint-2:       #16150F;
+    --bg-soft:         #262624;
+    --bg-elevated:     #2D2C29;
+    --bg-code:         #0F0E0A;
+
+    --ink:             #F5F2EA;
+    --ink-soft:        #E5E0D2;
+    --text:            #C8C2B4;
+    --text-soft:       #B0AA9B;
+    --muted:           #9A9486;
+    --muted-soft:      #7A7568;
+    --disabled:        #55514A;
+
+    --border:          #35332F;
+    --border-hover:    #44413C;
+    --border-strong:   #55514A;
+    --divider:         #3A3834;
+
+    --accent:          #D97757;
+    --accent-hover:    #E4896B;
+    --accent-text:     #E08A6F;
+    --accent-text-hover: #F09C82;
+    --accent-soft:     #4A3428;
+    --accent-bg:       rgba(217, 119, 87, 0.12);
+    --accent-border:   rgba(217, 119, 87, 0.3);
+
+    --selection-bg:    rgba(217, 119, 87, 0.3);
+    --mark-bg:         #4A3428;
+  }
+}
+
+/* ========================================================================
+   Base resets for Claude aesthetic
+   ======================================================================== */
+
+* { box-sizing: border-box; }
+*::selection { background: var(--selection-bg); color: var(--ink); }
+
+html { font-size: 16px; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: border-color var(--dur-fast) var(--ease-quad);
+}
+a:hover { border-bottom-color: var(--accent); }
+
+em, i { font-style: italic; color: var(--ink); }
+strong, b { font-weight: 600; color: var(--ink); }
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 2px 6px;
+}
+
+pre {
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  overflow-x: auto;
+  line-height: 1.6;
+}
+pre code { background: none; border: none; padding: 0; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--divider);
+  margin: var(--s-7) 0;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+::marker { color: var(--accent); }
+
+input, textarea, select, button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ========================================================================
+   Utility classes (optional)
+   ======================================================================== */
+
+.tabular { font-variant-numeric: tabular-nums lining-nums; }
+.oldstyle { font-variant-numeric: oldstyle-nums proportional-nums; }
+.display { font-family: var(--font-display); }
+.mono { font-family: var(--font-mono); }
+.muted { color: var(--muted); }
+.accent { color: var(--accent-text); }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
