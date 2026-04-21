@@ -163,7 +163,7 @@ kraft / manilla / plum / mineral)。见 [`references/palette.md`](references/pal
 
 ## 和 `/hyperframes` 配合
 
-如果你也用 [HyperFrames](https://github.com/eze-is/hyperframes) 做视频合成,这个 skill 就是它的默认设计语言:
+如果你也用 [HyperFrames](https://github.com/heygen-com/hyperframes) 做视频合成,这个 skill 就是它的默认设计语言:
 
 1. 新建 hyperframes 项目后,把 [`assets/DESIGN.template.md`](assets/DESIGN.template.md) 复制为项目根目录的 `DESIGN.md`
 2. [`assets/vars.css`](assets/vars.css) 粘进合成的 `<style>` 顶部
