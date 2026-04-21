@@ -121,31 +121,45 @@ claude-design/
 
 > **给 Claude Code 看的主入口是 `SKILL.md`**,其他文件是按需加载的分层引用。修改 skill 时,先改 `SKILL.md`,再动 `references/` 与 `assets/`。
 
-## 一眼预览 — 核心 Token
+## 一眼预览 — 核心 Token(v0.2 · 官方 swatch 对齐)
 
-### Light(Paper mode · 默认)
+> **v0.2** 所有 token 已经从 `anthropic.com` 与 `claude.com` 的 `:root` CSS 自定义
+> 属性里**实测校准**过。命名尽可能 1:1 保留官方 swatch 语义(`clay` / `ivory` /
+> `slate`),方便未来对照更新。
 
-| Token | Hex | 角色 |
-|---|---|---|
-| `--bg` | `#F0EEE5` | 纸底 |
-| `--bg-soft` | `#FAF9F5` | 次级面板 |
-| `--ink` | `#141413` | 标题 · 暖黑 |
-| `--text` | `#3D3929` | 正文 · 深棕 |
-| `--muted` | `#6E6A5F` | 次要 · AA 合规 |
-| `--border` | `#E5E1D8` | 细边 |
-| `--accent` | `#CC785C` | 铁锈 · 装饰 |
-| `--accent-text` | `#A84F32` | 铁锈 · 文字(AA 合规) |
+### Light(Editorial mode · 默认)
 
-### Dark(Ink mode)
+| Token | Hex | 官方对应 | 角色 |
+|---|---|---|---|
+| `--bg` | `#FAF9F5` | ivory-light / gray-050 | **主纸底** |
+| `--bg-soft` | `#F0EEE6` | ivory-medium / gray-150 | 次级面板 |
+| `--bg-elevated` | `#E8E6DC` | ivory-dark / gray-200 | 卡片 |
+| `--ink` | `#141413` | slate-dark / gray-950 | 标题 |
+| `--text` | `#3D3D3A` | slate-medium / gray-700 | 正文 |
+| `--muted` | `#5E5D59` | slate-light / gray-600 | 次要(AA) |
+| `--border` | `#E8E6DC` | ivory-dark | 细边 |
+| `--accent` | `#D97757` | **clay** | 主铁锈(装饰) |
+| `--accent-hover` | `#C96442` | clay-interactive | 按钮 hover |
+| `--accent-text` | `#C6613F` | accent | 文字用铁锈(AA) |
 
-| Token | Hex | 角色 |
-|---|---|---|
-| `--bg` | `#1A1915` | 深墨 |
-| `--ink` | `#F5F2EA` | 标题 · 暖白 |
-| `--text` | `#C8C2B4` | 正文 · 米灰 |
-| `--accent` | `#D97757` | 铁锈 · 暗底加亮一档 |
+### Dark(Product mode · claude-code 风格)
 
-完整 token(含 semantic、syntax highlighting、dark mode 全套)见 [`references/palette.md`](references/palette.md),可粘贴的 CSS 见 [`assets/vars.css`](assets/vars.css)。
+| Token | Hex | 官方对应 | 角色 |
+|---|---|---|---|
+| `--bg` | `#1A1918` | gray-900 | 主深底 |
+| `--bg-soft` | `#262624` | gray-800 | 次级 |
+| `--ink` | `#FAF9F5` | gray-050 | 标题反白 |
+| `--text` | `#B0AEA5` | cloud-medium / gray-400 | 正文 |
+| `--muted` | `#87867F` | cloud-dark / gray-500 | 次要(AA) |
+| `--accent` | `#D97757` | clay(同 light) | 铁锈 |
+| `--accent-text` | `#E08B6D` | — | 暗底 AA 文字铁锈 |
+
+**v0.2 新增**:完整 **gray ladder 20 阶**(gray-000 ~ gray-1000)和 **12 个
+编辑次级 swatch**(olive / cactus / sky / heather / fig / coral / oat / peach /
+kraft / manilla / plum / mineral)。见 [`references/palette.md`](references/palette.md)
+与 [`references/brand-swatches.md`](references/brand-swatches.md)。
+
+可粘贴的 CSS 见 [`assets/vars.css`](assets/vars.css)。
 
 ## 和 `/hyperframes` 配合
 
